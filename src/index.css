@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #111111;
+  --paper: #ffffff;
+  --amber: #e5a91b;
+  --muted: #c8c5bd;
+  --grid-dark: rgba(255, 255, 255, 0.055);
+  --grid-light: rgba(17, 17, 17, 0.065);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-display {
+  font-family: 'Archivo Black', sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+.font-mono-tech {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Malhas quadriculadas das lâminas */
+.bg-grid-dark {
+  background-color: var(--ink);
+  color: var(--paper);
+  background-image:
+    linear-gradient(to right, var(--grid-dark) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-dark) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.bg-grid-light {
+  background-color: var(--paper);
+  color: var(--ink);
+  background-image:
+    linear-gradient(to right, var(--grid-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-light) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+/* Janela estilo sistema operacional retrô */
+.rpv-window-dark {
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  box-shadow: 8px 8px 0px var(--amber);
+}
+
+.rpv-window-light {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0px var(--amber);
+}
+
+/* Cartões com sombra sólida deslocada */
+.rpv-card-light {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+
+.rpv-card-amber {
+  background: var(--amber);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+
+.rpv-card-dark-ink {
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0px var(--amber);
+}
+
+/* Moldura de foto estilo Polaroid com listras diagonais */
+.polaroid-frame {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 12px 12px 14px 12px;
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0px var(--amber);
+  transform: rotate(-2deg);
+  transition: transform 0.25s ease;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+.striped-placeholder {
+  background-color: #171717;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #171717,
+    #171717 10px,
+    #242424 10px,
+    #242424 20px
+  );
+  border: 2px dashed var(--amber);
+}
